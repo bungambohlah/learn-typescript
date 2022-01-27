@@ -24,3 +24,10 @@ tsc HelloWorld.ts
 ```sh
 node HelloWorld.js
 ```
+
+**NOTES** : for Modules.ts & util.ts need to compare as one, like:
+
+```sh
+tsc util.ts Modules.ts --out util.js
+node util.js
+```
