@@ -4,30 +4,36 @@
 
 1. nodejs & npm
 2. typescript
+3. ts-node for TypeScript execution and REPL for node.js
 
 ### Installation
 
-1. install typescript globally
+1. install typescript and ts-node globally
 
 ```sh
-npm install -g typescript
+npm install -g typescript ts-node
 ```
 
-2. compile typescript file with tsc
+2. install dependencies based on package.json
 
 ```sh
-tsc HelloWorld.ts
+npm install
 ```
 
-3. then execute output file (which is js file) with node
+3. compile & execute typescript file with ts-node
 
 ```sh
-node HelloWorld.js
+ts-node src/HelloWorld.ts
 ```
 
-**NOTES** : for Modules.ts & util.ts need to compare as one, like:
+4. (optional) if you want compile all typescript files just execute (with grunt task runner help)
 
 ```sh
-tsc util.ts Modules.ts --out util.js
-node util.js
+npm run compile
+```
+
+then built files write on build folder, just execute with node like:
+
+```sh
+node build/main.js
 ```
