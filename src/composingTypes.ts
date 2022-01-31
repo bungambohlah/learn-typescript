@@ -13,7 +13,30 @@ console.log(windowstate);
 console.log(lockstate);
 console.log(positiveOddUnderTen);
 
-// 2. generics
+// 2. union types to define arrays containing multiple types
+const person: (string | number | boolean)[] = ["Afif", 1, true];
+person[0] = 100;
+
+// 3. Tuples. A tuple is an array with fixed size and known datatypes.
+// They are stricter than regular arrays.
+const tuples: [string, number, boolean] = ["Afif", 1, true];
+tuples[0] = "100"; // index 0 must be string
+
+// 4. Objects
+let objects: {
+  name: string;
+  location: string;
+  isProgrammer: boolean;
+};
+// Assign person to an object with all the necessary properties and value types
+objects = {
+  name: "Afif",
+  location: "UK",
+  isProgrammer: true,
+};
+objects.isProgrammer = true;
+
+// 5. generics
 type StringArray = Array<string>;
 type ObjectWithNameArray = Array<{ name: string }>;
 interface BackpackInterface<Type> {
