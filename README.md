@@ -20,13 +20,25 @@ npm install -g typescript ts-node
 npm install
 ```
 
-3. compile & execute typescript file with ts-node
+3. compile & execute specific typescript file with ts-node
 
 ```sh
 ts-node src/HelloWorld.ts
 ```
 
-4. (optional) if you want compile all typescript files just execute (with grunt task runner help)
+4. watch & compile all on typescript files just execute
+
+```sh
+npm start
+```
+
+then compiled files stored on `build` folder, then if you want execute built file
+
+```sh
+node build/main.js
+```
+
+5. (optional) if you want compile all typescript files just execute (with grunt task runner help)
 
 ```sh
 npm run compile
