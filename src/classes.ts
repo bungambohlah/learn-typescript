@@ -1,5 +1,5 @@
 class Quote {
-  name: String;
+  declare name: String;
   static castle: String = "Winterfell";
   saying: String;
   constructor(parameters: void) {
