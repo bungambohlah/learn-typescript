@@ -4,6 +4,7 @@
   "description": "### Required",
   "main": "index.js",
   "scripts": {
+    "start": "tsc -w",
     "compile": "grunt"
   },
   "repository": {
